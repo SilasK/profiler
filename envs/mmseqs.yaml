@@ -1,0 +1,7 @@
+# conda environments needed for the workflow should be stored here.
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+dependencies:
+  - mmseqs2

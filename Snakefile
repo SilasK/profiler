@@ -1,8 +1,3 @@
-# The main entry point of your workflow.
-# After configuring, running snakemake -n in a clone of this repository should successfully execute a dry-run of the workflow.
-
-
-configfile: "config.yaml"
 
 
 rule all:
@@ -11,4 +6,11 @@ rule all:
         # Subsequent target rules can be specified below. They should start with all_*.
 
 
-include: "rules/other.smk"
+rule all_alignments:
+    input:
+        stockholm_file=config['stockholm_file'],
+        tarbal= config['tarbal']
+
+
+include: 'rules/alignment.smk'
+include: 'rules/mmseqs.smk'

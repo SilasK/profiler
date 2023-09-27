@@ -1,0 +1,9 @@
+# conda environments needed for the workflow should be stored here.
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+dependencies:
+  - mafft=7.313
+  - trimal=1.4.1
+  - bioconda
